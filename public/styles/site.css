@@ -6130,7 +6130,7 @@ svg:not(:root) {
 article .article-content header h1 {
   font-size: 5.2rem;
   line-height: 1;
-  margin: -.4rem 0 .5em;
+  margin: 0 0 .5em;
   font-family: 'Yeseva One', cursive !important;
   font-style: normal;
   font-weight: 700; }
@@ -6138,7 +6138,8 @@ article .article-content header h1 {
 article .article-content header h2 {
   font-size: 2.6rem;
   line-height: 1;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-family: 'Josefin Sans', sans-serif; }
 
 article .article-content header {
   position: relative;
@@ -6166,7 +6167,7 @@ article .article-content .visual-header .caption {
   position: absolute;
   bottom: 60px;
   right: 0;
-  font-family: 'Libre Baskerville', georgia, serif;
+  font-family: georgia, serif;
   font-style: italic;
   font-size: 1.2rem;
   line-height: 1.66667;
