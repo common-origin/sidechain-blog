@@ -418,7 +418,7 @@ article .article-content .visual-header .caption {
     padding-left: 20px;
     padding-right: 20px;
 }
-.latest-page .horizontal .article-list .collection-module {
+.article-list .collection-module {
     margin-left: -20px;
     margin-right: -20px;
     display: -ms-flexbox;
@@ -429,3 +429,58 @@ article .article-content .visual-header .caption {
     align-items: center;
     margin-bottom: 40px;
 }
+.article-list .image {
+    position: relative;
+    min-height: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    pointer-events: none;
+}
+.article-list .collection-module .image a {
+    pointer-events: auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.article-list .article-details {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.blog .post {
+    margin-left: -20px;
+    margin-right: -20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.blog .title-link {
+    padding: 0 0 30px;
+    flex: 1 1 auto;
+    margin: 0;
+}
+.blog .title-link .title {
+    display:inline;
+    text-align:left !important;
+    color:#2b2b2b !important;
+}
+.blog .meta {
+    padding-left: 0;
+    padding-bottom: 0;
+    text-align: left;
+    line-height:2;
+}
+.blog .module .article-details .meta a {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+
