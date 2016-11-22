@@ -5822,7 +5822,8 @@ button.close {
     display: none !important; } }
 
 body {
-  background-color: #F7F7F7 !important; }
+  background-color: #F7F7F7 !important;
+  font-family: 'Open Sans', sans-serif !important; }
 
 a:hover, a:focus {
   color: #23527c;
@@ -6038,13 +6039,18 @@ article .article-meta {
   margin-bottom: 20px;
   margin-top: 8px; }
 
+.article-meta a {
+  color: #2B2B2B; }
+
 .authors-detail {
   list-style-type: none;
   font-size: 1.4rem; }
 
 .back-to-blog {
   padding-left: 20px;
-  padding-right: 20px; }
+  padding-right: 20px;
+  text-transform: uppercase;
+  font-size: 12px; }
 
 .authors-detail li {
   margin-bottom: 20px; }
@@ -6122,17 +6128,25 @@ svg:not(:root) {
   fill: #ddd; }
 
 article .article-content header h1 {
-  font-size: 4.8rem;
-  line-height: 1.25;
+  font-size: 5.2rem;
+  line-height: 1;
   margin: -.4rem 0 .5em;
+  font-family: 'Yeseva One', cursive !important;
+  font-style: normal;
   font-weight: 700; }
+
+article .article-content header h2 {
+  font-size: 2.6rem;
+  line-height: 1;
+  margin-bottom: 0; }
 
 article .article-content header {
   position: relative;
   min-height: 1px;
   padding-left: 20px;
   padding-right: 20px;
-  color: #2B2B2B; }
+  color: #2B2B2B;
+  width: 80%; }
 
 .visual-header {
   margin-bottom: 40px;
@@ -6152,7 +6166,7 @@ article .article-content .visual-header .caption {
   position: absolute;
   bottom: 60px;
   right: 0;
-  font-family: Tiempos,Georgia,serif;
+  font-family: 'Libre Baskerville', georgia, serif;
   font-style: italic;
   font-size: 1.2rem;
   line-height: 1.66667;
@@ -6161,13 +6175,15 @@ article .article-content .visual-header .caption {
 
 .contents {
   padding-top: 40px;
-  font-family: Tiempos,Georgia,serif;
   font-size: 1.8rem;
   line-height: 1.88889;
   color: #1A1A1A;
   padding-left: 20px;
   padding-right: 20px;
   width: 80%; }
+
+.contents p span {
+  font-family: georgia, serif !important; }
 
 #footer {
   margin-top: 30px;

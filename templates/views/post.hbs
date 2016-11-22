@@ -11,15 +11,14 @@
 			<ul class="authors-detail">
 				<li>
 					<div>
-						<span>by </span>
-						<a href="" class="display-name">Noah Yoo</a>
+						<span>by </span>{{author.name.first}}
 					</div>
 					<span class="title">Staff Writer</span>
 				</li>
 			</ul>
 			<ul class="genre-list before">
 				<li>
-					<a href="">Rap</a>
+					{{{categoryList data.post.categories}}}
 				</li>
 			</ul>
 			<span class="pub-date" title="Mon Nov 21 2016 15:45:00 GMT+1100 (AEDT)">5 hrs ago</span>
@@ -54,10 +53,7 @@
 				<div class="clearfix">
 					<header>
 						<h1>{{data.post.title}}</h1>
-						<h5>
-							{{{categoryList data.post.categories prefix="Posted in "}}}
-							{{#if author.name.first}}by {{author.name.first}}{{/if}}
-						</h5>
+						<h2 class="subtitle">The rapper’s ninth album is due out early next year</h2>
 					</header>
 				</div>
 					<div class="post visual-header">
@@ -69,7 +65,7 @@
 							</div>
 						</div>
 						<div class="caption">
-							<span data-reactid="250">Photo by Frazer Harrison/AMA2016/Getty Images for dcp</span>
+							<span>Photo by Frazer Harrison/AMA2016/Getty Images for dcp</span>
 						</div>
 					</div>
 					<div class="contents">
