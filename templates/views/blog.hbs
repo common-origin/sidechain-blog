@@ -1,19 +1,17 @@
 <div class="container-fluid blog-header">
 	<h1>Blog</h1>
 </div>
-<div class="container-fluid blog-top-section">
+<div id="blog-top-section" class="container-fluid">
 	<div class="module-row">
 		<div class="col-xs-8 large-module">
 			<div class="bg-image">
 
-				{{# each data.posts.results}}
+				{{# with data.posts.results.[0] }}
 					<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
 						<a class="image">
 							{{#if image}}<img src="{{{cloudinaryUrl image crop='fit' }}}" class="img">{{/if}}
 							<div class="overlay"></div>
 						</a>
-
-
 						<div class="module-desc">
 							<h2 class="">
 								<a class="title" href="{{postUrl slug}}">{{{title}}}</a>
@@ -23,19 +21,19 @@
 									<ul class="authors">
 										<li>
 											<a href="/staff/evan-minsker/" class="linked display-name">
-												<span class="by">by: </span>{{#if author.name.first}} {{author.name.first}}{{/if}}
+												<span class="by">by: </span>{{#if author.name.full}} {{author.name.full}}{{/if}}
 											</a>
 										</li>
 									</ul>
 								</div>
 								<div class="cat-date">
 									<a href="#" >News</a>
-									<span class="pub-date" title="Tue Nov 22 2016 09:53:43 GMT+1100 (AEDT)">7 hrs ago</span>
+									<span class="pub-date">{{{data.post.publishedDate}}} 7 hours ago</span>
 								</div>
 							</div>
 						</div>			
 					</div>
-				{{/each}}
+				{{/with}}
 
 			</div>
 		</div>
@@ -50,51 +48,53 @@
 		</div>
 	</div>
 </div>
-<div class="blog-list-section">
+<div id="blog-list-section">
 	<div class="container-fluid">
 		<div class="row clearfix">
 			<div class="col-xs-8 fragment-list article-list">
 				<!--<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>-->
-				<div class="module collection-module pitch-module blog">
+				
 
 						{{# each data.posts.results}}
 							<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-								<div class="image col-xs-12 col-md-6">
-									{{#if image}}<img src="{{{cloudinaryUrl image crop='fit' }}}" class="img">{{/if}}
-								</div>
-
-								<div class="article-details col-xs-12 col-md-6">
-									<h2 class="title-link">
-										<a class="title" href="{{postUrl slug}}">{{{title}}}</a>
-									</h2>
-									<div class="meta">
-										<div class="cat-date">
-											<a href="#" >News</a>
-											<span class="pub-date" title="Tue Nov 22 2016 09:53:43 GMT+1100 (AEDT)">7 hrs ago</span>
-										</div>
-										<ul class="genre-list before inline">
-											<li>
-												<a href="#">{{{categoryList categories}}}</a>
-											</li>
-										</ul>
+								<div class="module collection-module pitch-module blog">
+									<div class="image col-xs-12 col-md-6">
+										{{#if image}}<img src="{{{cloudinaryUrl image crop='fit' }}}" class="img">{{/if}}
 									</div>
 
+									<div class="article-details col-xs-12 col-md-6">
+										<h2 class="title-link">
+											<a class="title" href="{{postUrl slug}}">{{{title}}}</a>
+										</h2>
+										<div class="meta">
+											<div class="cat-date">
+												<a href="#" >News</a>
+												<span class="pub-date">{{{data.post.publishedDate}}} 7 hours ago</span>
+											</div>
+											<ul class="genre-list before inline">
+												<li>
+													<a href="#">{{{categoryList categories}}}</a>
+												</li>
+											</ul>
+										</div>
 
-									<!--<p class="lead text-muted">
-										{{#if author.name.first}}by {{author.name.first}}{{/if}}
-									</p>
-									<p>{{{content.brief}}}</p>
-									{{#if content.extended}}
-										<p class="read-more">
-											<a href="{{postUrl slug}}">Read more...</a>
+
+										<!--<p class="lead text-muted">
+											{{#if author.name.first}}by {{author.name.first}}{{/if}}
 										</p>
-									{{/if}}-->
+										<p>{{{content.brief}}}</p>
+										{{#if content.extended}}
+											<p class="read-more">
+												<a href="{{postUrl slug}}">Read more...</a>
+											</p>
+										{{/if}}-->
 
+									</div>
 								</div>			
 							</div>
 						{{/each}}
 
-				</div>
+				
 			</div>
 			<div class="col-xs-4 categories-bar">
 

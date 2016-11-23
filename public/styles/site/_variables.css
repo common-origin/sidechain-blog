@@ -35,7 +35,8 @@ dl, ol, ul {
     margin-right: -20px;
 }
 
-// NAV
+/* NAV */
+
 .navbar-default {
     background-color:#1A1A1A;
 }
@@ -53,7 +54,6 @@ dl, ol, ul {
 .primary-nav {
     position: relative;
     text-align: center;
-    background: #1A1A1A;
     transition: border-color .15s;
 }
 .primary-nav a, .section-nav a {
@@ -63,6 +63,9 @@ dl, ol, ul {
     display: inline-block;
     transition: .15s color;
     font-size: .8em;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent !important;
 }
 .primary-nav>ul>li>a {
     padding: 2.9rem 2rem 1.5rem;
@@ -101,10 +104,10 @@ dl, ol, ul {
     margin-bottom:40px;
 }
 
-// Home Styles
+/* Home Styles */
 
 
-// Home Articles
+/* Home Articles */
 
 .module-row {
     margin-left: -20px;
@@ -117,7 +120,7 @@ dl, ol, ul {
     flex-wrap: wrap;
     margin-bottom: 40px;
 }
-.module, module .image {
+.module, .module .image {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -216,14 +219,14 @@ dl, ol, ul {
     margin-left: .8rem;
 }
 
-// Lower section 
+/* Lower section */
 
 .lower-section {
     padding-top: 40px;
     background: #fff;
 }
 
-// Blog post 
+/* Blog post */
 
 .post p {
 	padding-top:20px;
@@ -285,7 +288,7 @@ article .article-meta {
     text-transform: uppercase;
 }
 
-// Sidebar share 
+/* Sidebar share */
 
 .share-module .primary>li {
     display: -ms-flexbox;
@@ -342,7 +345,7 @@ svg:not(:root) {
 
 
 
-// Blog Header
+/* Blog Header */
 
 .blog-header {
     padding-top:90px;
@@ -396,9 +399,9 @@ article .article-content .visual-header .caption {
 }
 
 
-// Blog top section 
+/* Blog top section */
 
-.blog-top-section {
+#blog-top-section {
     padding-top:40px;  
     margin-bottom: 40px;
 }
@@ -427,18 +430,18 @@ article .article-content .visual-header .caption {
     display: flex;
     position:relative;
 }
-.post .image {
+#blog-top-section .post .image {
     display:flex;
     position: relative;
     width: 100%;
 }
-.post .image img {
+#blog-top-section .post .image img {
     object-fit: cover;
     height: 100%;
     z-index:5;
     width:100%;
 }
-.post .image .overlay {
+#blog-top-section .post .image .overlay {
     position: absolute;
     z-index: 10;
     top: 0;
@@ -494,14 +497,14 @@ article .article-content .visual-header .caption {
 
 
 
-// Blog list 
+/* Blog list */
 
-.blog-list-section {
+#blog-list-section {
     background-color: #fff;
-    padding: 60px 0 40px;
+    padding: 80px 0 40px;
 }
 
-// Blog post contents
+/* Blog post contents */
 
 .contents {
     padding-top: 40px;
@@ -512,19 +515,19 @@ article .article-content .visual-header .caption {
     padding-right: 20px;
     width:80%;
 }
-.contents p span {
+.contents p span, .contents p {
     font-family: georgia, serif !important;    
 }
 
-// Mian blog page 
+/* Mian blog page */
 
-.article-list {
+#blog-list-section .article-list {
     position: relative;
     min-height: 1px;
     padding-left: 20px;
     padding-right: 20px;
 }
-.article-list .collection-module {
+#blog-list-section .collection-module {
     margin-left: -20px;
     margin-right: -20px;
     display: -ms-flexbox;
@@ -535,7 +538,7 @@ article .article-content .visual-header .caption {
     align-items: center;
     margin-bottom: 40px;
 }
-.article-list .image {
+#blog-list-section .article-list .post .blog .image {
     position: relative;
     min-height: 1px;
     padding-left: 20px;
@@ -546,18 +549,18 @@ article .article-content .visual-header .caption {
     flex-direction: column;
     pointer-events: none;
 }
-.article-list .collection-module .image a {
+#blog-list-section .collection-module .image a {
     pointer-events: auto;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
 }
-.article-list .article-details {
+#blog-list-section .article-list .article-details {
     padding-left: 20px;
     padding-right: 20px;
 }
-.blog .post {
+#blog-list-section .article-list .post {
     margin-left: -20px;
     margin-right: -20px;
     display: -ms-flexbox;
@@ -567,23 +570,23 @@ article .article-content .visual-header .caption {
     -ms-flex-align: center;
     align-items: center;
 }
-.blog .title-link {
+#blog-list-section .article-list .post .blog .title-link {
     padding: 0 0 30px;
     flex: 1 1 auto;
     margin: 0;
 }
-.blog .title-link .title {
+#blog-list-section .article-list .post .blog .title-link .title {
     display:inline;
     text-align:left !important;
     color:#2b2b2b !important;
 }
-.blog .meta {
+#blog-list-section .article-list .post .blog .meta {
     padding-left: 0;
     padding-bottom: 0;
     text-align: left;
     line-height:2;
 }
-.blog .module .article-details .meta a {
+#blog-list-section .article-list .post .blog .module .article-details .meta a {
     font-size: 1rem;
     font-weight: 600;
 }

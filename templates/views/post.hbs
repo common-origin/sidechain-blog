@@ -11,7 +11,7 @@
 			<ul class="authors-detail">
 				<li>
 					<div>
-						<span>by </span>{{author.name.first}}
+						<span>by </span>{{author.name.full}}
 					</div>
 					<span class="title">Staff Writer</span>
 				</li>
@@ -21,7 +21,7 @@
 					{{{categoryList data.post.categories}}}
 				</li>
 			</ul>
-			<span class="pub-date" title="Mon Nov 21 2016 15:45:00 GMT+1100 (AEDT)">5 hrs ago</span>
+			<span class="pub-date">{{{data.post.publishedDate}}}</span>
 			<div class="share-module" title="Share">
 				<ul class="primary">
 					<li>
@@ -60,7 +60,9 @@
 						<div class="img full" >
 							<div class="bg bg-pattern-1">
 								<div class="inner-row">
-									{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="img-responsive">{{/if}}
+									{{#if data.post.image}}
+										<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="img-responsive">
+									{{/if}}
 								</div>
 							</div>
 						</div>
