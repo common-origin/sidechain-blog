@@ -1,17 +1,18 @@
 <article class="container-fluid">
 	<div class="row blog-container">
-		<div class="back-to-blog">
-			<p><a href="/blog">&larr; back to the blog</a></p>
-			<hr>
+		<div class="post-nav">
+			<div class="back-to-blog">
+				<p><a href="/blog">&larr; back to the blog</a></p>
+			</div>
 		</div>
-		<div class="col-xs-2 article-meta">
+		<div class="col-xs-12 col-md-2 article-meta">
 			<h1 class="section-title">
 				<a href="">News</a>
 			</h1>
 			<ul class="authors-detail">
 				<li>
 					<div>
-						<span>by </span>{{author.name.full}}
+						<span>by </span>{{{author.name.full}}}
 					</div>
 					<span class="title">Staff Writer</span>
 				</li>
@@ -53,7 +54,7 @@
 				<div class="clearfix">
 					<header>
 						<h1>{{data.post.title}}</h1>
-						<h2 class="subtitle">The rapper’s ninth album is due out early next year</h2>
+						<h2 class="subtitle">{{{data.post.content.brief}}}</h2>
 					</header>
 				</div>
 					<div class="post visual-header">
@@ -61,7 +62,7 @@
 							<div class="bg bg-pattern-1">
 								<div class="inner-row">
 									{{#if data.post.image}}
-										<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="img-responsive">
+										<img src="{{{cloudinaryUrl data.post.image crop='fit' }}}" class="img-responsive">
 									{{/if}}
 								</div>
 							</div>

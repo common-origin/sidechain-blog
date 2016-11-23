@@ -1,14 +1,27 @@
 <div class="container-fluid blog-header">
-	<h1>Blog</h1>
+	<div class="header-container clearfix">
+		<p class="">
+			<a>Blog</a>
+		</p>
+		<div class="cat-nav">	
+			<ul>
+				{{# each data.categories }}
+					<li class="cat-nav-li">
+						<a href="{{categoryUrl key}}" class="false" >{{name}}</a>
+					</li>	
+				{{/each}}
+			</ul>
+		</div>
+	</div>	
 </div>
 <div id="blog-top-section" class="container-fluid">
 	<div class="module-row">
-		<div class="col-xs-8 large-module">
+		<div class="col-xs-12 col-md-8 large-module">
 			<div class="bg-image">
 
 				{{# with data.posts.results.[0] }}
 					<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-						<a class="image">
+						<a class="image" href="{{postUrl slug}}">
 							{{#if image}}<img src="{{{cloudinaryUrl image crop='fit' }}}" class="img">{{/if}}
 							<div class="overlay"></div>
 						</a>
@@ -28,7 +41,7 @@
 								</div>
 								<div class="cat-date">
 									<a href="#" >News</a>
-									<span class="pub-date">{{{data.post.publishedDate}}} 7 hours ago</span>
+									<span class="pub-date">{{{publishedDate}}}</span>
 								</div>
 							</div>
 						</div>			
@@ -37,21 +50,21 @@
 
 			</div>
 		</div>
-		<div class="col-xs-4 categories-bar">
-			<h2>Categories</h2>
-			<div style="margin-top: 70px;" class="list-group">
+		<div class="col-xs-12 col-md-4 categories-bar">
+			<!--<h2>Categories</h2>
+			<div class="list-group">
 				<a href="/blog" class="active list-group-item">All Categories</a>
 				{{# each data.categories }}
-				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+					<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
 				{{/each}}
-			</div>
+			</div>-->
 		</div>
 	</div>
 </div>
 <div id="blog-list-section">
 	<div class="container-fluid">
 		<div class="row clearfix">
-			<div class="col-xs-8 fragment-list article-list">
+			<div class="col-xs-12 col-md-8 fragment-list article-list">
 				<!--<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>-->
 				
 
@@ -68,19 +81,19 @@
 										</h2>
 										<div class="meta">
 											<div class="cat-date">
-												<a href="#" >News</a>
-												<span class="pub-date">{{{data.post.publishedDate}}} 7 hours ago</span>
+												<a href="#">News</a>
+												<span class="pub-date">{{{publishedDate}}}</span>
 											</div>
 											<ul class="genre-list before inline">
 												<li>
-													<a href="#">{{{categoryList categories}}}</a>
+													<a href="{{postUrl slug}}">{{{categoryList categories}}}</a>
 												</li>
 											</ul>
 										</div>
 
 
-										<!--<p class="lead text-muted">
-											{{#if author.name.first}}by {{author.name.first}}{{/if}}
+										<!--<p class="author lead text-muted">
+											{{#if author.name.full}}by {{author.name.full}}{{/if}}
 										</p>
 										<p>{{{content.brief}}}</p>
 										{{#if content.extended}}
@@ -96,7 +109,7 @@
 
 				
 			</div>
-			<div class="col-xs-4 categories-bar">
+			<div class="col-md-4 categories-bar">
 
 			</div>
 		</div>
