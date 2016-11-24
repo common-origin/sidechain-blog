@@ -1,11 +1,11 @@
-<article class="container-fluid">
+<article id="blog-post-page" class="container-fluid">
 	<div class="row blog-container">
 		<div class="post-nav">
 			<div class="back-to-blog">
 				<p><a href="/blog">&larr; back to the blog</a></p>
 			</div>
 		</div>
-		<div class="col-xs-12 col-md-2 article-meta">
+		<div class="hidden-xs col-xs-12 col-sm-2 article-meta">
 			<h1 class="section-title">
 				<a href="">News</a>
 			</h1>
@@ -69,6 +69,25 @@
 						</div>
 						<div class="caption">
 							<span>Photo by Frazer Harrison/AMA2016/Getty Images for dcp</span>
+						</div>
+					</div>
+					<div class="lower-meta">
+						<div class="visible-xs col-xs-12 article-meta">
+							<h1 class="section-title">
+								<a href="">News</a>
+							</h1>
+							<ul class="authors-detail">
+								<li>
+									<div>
+										<span>by </span>{{{author.name.full}}}<span class="pub-date">{{{data.post.publishedDate}}}</span>
+									</div>
+								</li>
+							</ul>
+							<ul class="genre-list before">
+								<li>
+									{{{categoryList data.post.categories}}}
+								</li>
+							</ul>
 						</div>
 					</div>
 					<div class="contents">
