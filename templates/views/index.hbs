@@ -3,7 +3,7 @@
 	<div class="container-fluid">
 		<div class="jumbotron home-jumbo"><img src="/images/sidechain-logo.svg" width="160">
 			<h1>Demo Music Blog</h1>
-			<p>This is a <a href='http://keystonejs.com' target='_blank'>Sidechain</a> website.</p>
+			<p>This is a <a href='' target='_blank'>Sidechain</a> website.</p>
 			<hr>
 		</div>
 	</div>
@@ -111,7 +111,7 @@
 				<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
 				
 
-						{{# each data.posts.results}}
+						{{#if data.posts.results}}
 							<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
 								<div class="module collection-module pitch-module blog">
 									<div class="image col-xs-12 col-md-6">
@@ -150,7 +150,7 @@
 									</div>
 								</div>			
 							</div>
-						{{/each}}
+						{{/if}}
 
 			</div>
 		</div>
