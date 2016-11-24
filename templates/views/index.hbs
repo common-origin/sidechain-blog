@@ -104,8 +104,56 @@
 		</div>
 	</section>
 </div>
-<div class="lower-section">
-	<section class="third-tier horizontal">
-	</section>
+<div id="lower-section">
+	<div class="container-fluid">
+		<div class="row clearfix">
+			<div class="col-xs-12 col-md-8 fragment-list article-list">
+				<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
+				
+
+						{{# each data.posts.results}}
+							<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+								<div class="module collection-module pitch-module blog">
+									<div class="image col-xs-12 col-md-6">
+										{{#if image}}<img src="{{{cloudinaryUrl image crop='fit' }}}" class="img">{{/if}}
+									</div>
+
+									<div class="article-details col-xs-12 col-md-6">
+										<a class="title-link" href="{{postUrl slug}}">
+											<h2 class="title">
+												{{{title}}}
+											</h2>
+										</a>
+										<div class="meta">
+											<div class="cat-date">
+												<a href="#">News</a>
+												<span class="pub-date">{{{publishedDate}}}</span>
+											</div>
+											<ul class="genre-list before inline">
+												<li>
+													<a href="{{postUrl slug}}">{{{categoryList categories}}}</a>
+												</li>
+											</ul>
+										</div>
+
+
+										<!--<p class="author lead text-muted">
+											{{#if author.name.full}}by {{author.name.full}}{{/if}}
+										</p>
+										<p>{{{content.brief}}}</p>
+										{{#if content.extended}}
+											<p class="read-more">
+												<a href="{{postUrl slug}}">Read more...</a>
+											</p>
+										{{/if}}-->
+
+									</div>
+								</div>			
+							</div>
+						{{/each}}
+
+			</div>
+		</div>
+	</div>
 </div>
 

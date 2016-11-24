@@ -6457,6 +6457,51 @@ article .article-content .visual-header .caption {
   letter-spacing: .075em;
   text-transform: uppercase; }
 
+/* Mian blog page */
+#lower-section {
+  background-color: #fff;
+  padding: 40px 0 40px; }
+
+#lower-section .article-list {
+  position: relative;
+  min-height: 1px;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+#lower-section .collection-module {
+  margin-bottom: 40px; }
+
+#lower-section .collection-module .image a {
+  pointer-events: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+#lower-sectionn .article-list .article-details {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+#lower-section .article-list .post {
+  margin-left: -20px;
+  margin-right: -20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center; }
+
+#lower-section .article-list .post .blog .module .article-details .meta a {
+  font-size: 1rem;
+  font-weight: 600; }
+
+#lower-section .author {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .075em;
+  text-transform: uppercase; }
+
 @media only screen and (min-width: 992px) {
   #blog-list-section .article-list .post .blog .title-link {
     padding: 0 0 30px;

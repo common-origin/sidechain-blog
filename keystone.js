@@ -69,6 +69,9 @@ keystone.set('email locals', {
 	},
 });
 
+// Loading Social Media share
+keystone.set('baseUrl', (keystone.get('env') == 'production') ? 'https://nodevision.com.au/' : 'http://localhost:3000/');
+
 // Load your project's email test routes
 keystone.set('email tests', require('./routes/emails'));
 
