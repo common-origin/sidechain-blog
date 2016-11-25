@@ -1,0 +1,129 @@
+<div id="feature-section" class="background-contain">
+	<div id="feature-header" class="container-fluid">
+		<div class="header-container clearfix">
+			<p>
+				<a href="/feature">Features</a>
+			</p>
+
+			<div class="dropdown genre-menu">
+
+					<button class="btn btn-default dropdown-toggle trigger" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	    				<span>GENRES</span>
+					    <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						{{# each data.categories }}
+							<li class="genre-menu-li">
+								<a href="{{categoryUrl key}}" class="false" >{{name}}</a>
+							</li>	
+						{{/each}}
+					</ul>
+
+			</div>	
+
+
+		</div>	
+	</div>
+	<div id="feature-top-section" class="container-fluid">
+		<div class="">
+			<div class="bg-image">
+
+				{{# with data.posts.results.[0] }}
+					<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+						<a class="image" href="{{postUrl slug}}">
+							{{#if image}}<img src="{{{cloudinaryUrl image crop='fit' }}}" class="img">{{/if}}
+							<div class="overlay"></div>
+						</a>
+						<div class="module-desc">
+							<h2 class="">
+								<a class="title" href="{{postUrl slug}}">{{{title}}}</a>
+							</h2>
+							<div class="meta">
+								<div class="byline">
+									<ul class="authors">
+										<li>
+											<a href="/staff/evan-minsker/" class="linked display-name">
+												<span class="by">by: </span>{{#if author.name.full}} {{author.name.full}}{{/if}}
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="cat-date">
+									<a href="#" >News</a>
+									<span class="pub-date">{{date publishedDate format='ddd MMM YYYY'}}</span>
+								</div>
+							</div>
+						</div>			
+					</div>
+				{{/with}}
+
+			</div>
+			<div class="col-xs-12 col-md-4 categories-bar">
+				<!--<h2>Categories</h2>
+				<div class="list-group">
+					<a href="/blog" class="active list-group-item">All Categories</a>
+					{{# each data.categories }}
+						<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+					{{/each}}
+				</div>-->
+			</div>
+		</div>
+	</div>
+</div>	
+<div id="blog-list-section">
+	<div class="container-fluid">
+		<div class="row clearfix">
+			<div class="col-xs-12 fragment-list article-list">
+				<!--<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>-->
+				
+
+						{{# each data.posts.results}}
+							<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+								<div class="module collection-module pitch-module blog">
+									<div class="image col-xs-12 col-md-6">
+										{{#if image}}<img src="{{{cloudinaryUrl image crop='fit' }}}" class="img">{{/if}}
+									</div>
+
+									<div class="article-details col-xs-12 col-md-6">
+										<a class="title-link" href="{{postUrl slug}}">
+											<h2 class="title">
+												{{{title}}}
+											</h2>
+										</a>
+										<div class="meta">
+											<div class="cat-date">
+												<a href="#">News</a>
+												<span class="pub-date">{{date publishedDate format='ddd MMM YYYY'}}</span>
+											</div>
+											<ul class="genre-list before inline">
+												<li>
+													<a href="{{postUrl slug}}">{{{categoryList categories}}}</a>
+												</li>
+											</ul>
+										</div>
+
+
+										<!--<p class="author lead text-muted">
+											{{#if author.name.full}}by {{author.name.full}}{{/if}}
+										</p>
+										<p>{{{content.brief}}}</p>
+										{{#if content.extended}}
+											<p class="read-more">
+												<a href="{{postUrl slug}}">Read more...</a>
+											</p>
+										{{/if}}-->
+
+									</div>
+								</div>			
+							</div>
+						{{/each}}
+
+				
+			</div>
+			<div class="col-md-4 categories-bar">
+
+			</div>
+		</div>
+		{{>pagination}}
+	</div>
+</div>
