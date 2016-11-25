@@ -25,6 +25,7 @@ Sidechain.schema.virtual('canAccessKeystone').get(function () {
  * Relationships
  */
 Sidechain.relationship({ ref: 'Post', path: 'posts', refPath: 'author' });
+Sidechain.relationship({ ref: 'Review', path: 'reviews', refPath: 'author' });
 
 
 /**
