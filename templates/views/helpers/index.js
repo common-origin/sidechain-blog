@@ -40,7 +40,7 @@ module.exports = function () {
 	//
 	//
 	// *Usage example:*
-	// `{{date format='MM YYYY}}`
+	// `{{date format='MM YYYY'}}`
 	// `{{date publishedDate format='MM YYYY'`
 	//
 	// Returns a string formatted date

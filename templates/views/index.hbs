@@ -10,150 +10,32 @@
 </div>
 <div class="container-fluid">
 	<section class="module-row">
-		<div class="col-xs-12 col-md-3 module latest-page second-tier collection-module">
-			<div class="image">
-				<a href="">
-					<img src="/images/story-1.jpg">
-				</a>
+		{{#each data.posts.results}}
+			<div class="col-xs-12 col-md-3 module latest-page second-tier collection-module">
+				<div class="image">
+					<a href="">
+						{{#if image}}<img src="{{{cloudinaryUrl image crop='fit' }}}" class="img">{{/if}}
+					</a>
+				</div>
+				<div class="article-details">
+					<a href="{{postUrl slug}}" class="title-link">
+						<h3 class="title">{{{title}}}</h3>
+					</a>
+					<div class="meta">
+						<div class="cat-date">
+							<a href="{{categoryUrl slug}}">{{{description}}}</a>
+							<span class="pub-date">{{date publishedDate format='ddd MMM YYYY'}}</span>
+						</div>
+						<ul class="genre-list before inline">
+							<li>
+								<a href="{{categoryUrl slug}}">{{{categoryList categories}}}</a>
+							</li>
+						</ul>
+					</div>			
+				</div>
 			</div>
-			<div class="article-details">
-				<a href="" class="title-link">
-					<h3 class="title">Nemo enim ipsam voluptatem quia voluptas</h3>
-				</a>
-				<div class="meta">
-					<div class="cat-date">
-						<a href="">NEWS</a>
-						<span class="pub-date">4 HOURS AGO</span>
-					</div>
-					<ul class="genre-list before inline">
-						<li>
-							<a href="">CATEGORY</a>
-						</li>
-					</ul>
-				</div>			
-			</div>
-		</div>
-		<div class="col-xs-12 col-md-3 module latest-page second-tier collection-module">
-			<div class="image">
-				<a href="">
-					<img src="/images/story-2.jpg">
-				</a>
-			</div>
-			<div class="article-details">
-				<a href="" class="title-link">
-					<h3 class="title">Sed ut perspiciatis unde omnis iste natus error sit</h3>
-				</a>
-				<div class="meta">
-					<div class="cat-date">
-						<a href="">NEWS</a>
-						<span class="pub-date">4 HOURS AGO</span>
-					</div>
-					<ul class="genre-list before inline">
-						<li>
-							<a href="">CATEGORY</a>
-						</li>
-					</ul>
-				</div>			
-			</div>
-		</div>
-		<div class="col-xs-12 col-md-3 module latest-page second-tier collection-module">
-			<div class="image">
-				<a href="">
-					<img src="/images/story-3.jpg">
-				</a>
-			</div>
-			<div class="article-details">
-				<a href="" class="title-link">
-					<h3 class="title">Ut enim ad minima veniam, quis nostrum</h3>
-				</a>
-				<div class="meta">
-					<div class="cat-date">
-						<a href="">NEWS</a>
-						<span class="pub-date">4 HOURS AGO</span>
-					</div>
-					<ul class="genre-list before inline">
-						<li>
-							<a href="">CATEGORY</a>
-						</li>
-					</ul>
-				</div>			
-			</div>
-		</div>
-		<div class="col-xs-12 col-md-3 module latest-page second-tier collection-module">
-			<div class="image">
-				<a href="">
-					<img src="/images/story-4.jpg">
-				</a>
-			</div>
-			<div class="article-details">
-				<a href="" class="title-link">
-					<h3 class="title">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</h3>
-				</a>
-				<div class="meta">
-					<div class="cat-date">
-						<a href="">NEWS</a>
-						<span class="pub-date">4 HOURS AGO</span>
-					</div>
-					<ul class="genre-list before inline">
-						<li>
-							<a href="">CATEGORY</a>
-						</li>
-					</ul>
-				</div>			
-			</div>
-		</div>
+		{{/each}}
 	</section>
 </div>
-<div id="lower-section">
-	<div class="container-fluid">
-		<div class="row clearfix">
-			<div class="col-xs-12 col-md-8 fragment-list article-list">
-				<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
-				
 
-						{{#each data.posts.results}}
-							<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-								<div class="module collection-module pitch-module blog">
-									<div class="image col-xs-12 col-md-6">
-										{{#if image}}<img src="{{{cloudinaryUrl image crop='fit' }}}" class="img">{{/if}}
-									</div>
-
-									<div class="article-details col-xs-12 col-md-6">
-										<a class="title-link" href="{{postUrl slug}}">
-											<h2 class="title">
-												{{{title}}}
-											</h2>
-										</a>
-										<div class="meta">
-											<div class="cat-date">
-												<a href="#">News</a>
-												<span class="pub-date">{{{publishedDate}}}</span>
-											</div>
-											<ul class="genre-list before inline">
-												<li>
-													<a href="{{postUrl slug}}">{{{categoryList categories}}}</a>
-												</li>
-											</ul>
-										</div>
-
-
-										<!--<p class="author lead text-muted">
-											{{#if author.name.full}}by {{author.name.full}}{{/if}}
-										</p>
-										<p>{{{content.brief}}}</p>
-										{{#if content.extended}}
-											<p class="read-more">
-												<a href="{{postUrl slug}}">Read more...</a>
-											</p>
-										{{/if}}-->
-
-									</div>
-								</div>			
-							</div>
-						{{/each}}
-
-			</div>
-		</div>
-	</div>
-</div>
 
