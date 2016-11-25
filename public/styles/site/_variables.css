@@ -155,6 +155,12 @@ dl, ol, ul {
     background-size:cover;
     margin-bottom:40px;
 }
+@media only screen and (max-width: 767px) and (min-width: 1px) {
+    .background-contain {
+        margin-bottom:20px;
+    }
+}
+
 
 /* Home Styles */
 
